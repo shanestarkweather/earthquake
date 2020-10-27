@@ -1,11 +1,13 @@
 import React from 'react';
 
 const Header = () => {
-    return (
-        <div>
-            This is Header.
-        </div>
-    );
+	return (
+		<div>
+			<h1>
+				<a href='/'>What's Shakin'?</a>
+			</h1>
+		</div>
+	);
 };
 
 export default Header;
