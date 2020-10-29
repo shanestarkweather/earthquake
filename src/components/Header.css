@@ -11,13 +11,8 @@ h1:hover {
 /* I learned how to do this shake animation here: https://www.geeksforgeeks.org/how-to-shake-text-on-hover-using-html-and-css/ */
 
 @keyframes shake {
-	
 	0% {
 		transform: translateY(0);
-	}
-
-	0% {
-		transform: translateX(0);
 	}
 
 	12.5% {
