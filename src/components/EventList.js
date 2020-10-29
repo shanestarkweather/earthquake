@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import './EventList.css';
-import Moment from 'react-moment'
+import Moment from 'react-moment';
 
 const EventList = () => {
 	const [earthquakes, setEarthquakes] = useState([]);
@@ -18,12 +18,21 @@ const EventList = () => {
 
 	return (
 		<div className='list'>
+			<h2>Earthquakes above magnitude 1.0 within in the last hour:</h2>
 			{earthquakes.map((earthquake) => (
 				<Link to={`/detail/${earthquake.id}`} key={earthquake.id}>
-					<div className='list-item'>
-							<span><h4><Moment>{earthquake.properties.time}</Moment></h4></span>
-							<span><h4 className='list-props'>{earthquake.properties.place}</h4></span>
-							{/* <span><h4 className='list-props'>Magnitude {Math.round({earthquake.properties.mag} * 100)/100}</h4></span>	 */}
+					<div className='list-items'>
+						<span className='list-details'>
+							<h4>
+								<Moment>{earthquake.properties.time}</Moment>
+							</h4>
+						</span>
+						<span className='list-details'>
+							<h4>{earthquake.properties.place}</h4>
+						</span>
+						<span className='list-details'>
+							<h4>Magnitude: {earthquake.properties.mag}</h4>
+						</span>
 					</div>
 				</Link>
 			))}

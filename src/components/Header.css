@@ -1,3 +1,35 @@
 .header {
-    background-color: lightskyblue;
+    background-color: lightgray;
+    color: white;
+    padding: 25px;
+}
+
+
+h1:hover { 
+    animation:  shake 0.5s 
+  } 
+  
+
+  /* I learned how to do this shake animation here: https://www.geeksforgeeks.org/how-to-shake-text-on-hover-using-html-and-css/ */
+  @keyframes shake{ 
+    0%{ 
+      transform: translateX(0) 
+    } 
+    12.5%{ 
+      transform: translateX(5px); 
+    } 
+      
+    25%{ 
+      transform: translateX(-5px); 
+    } 
+    50%{ 
+      transform: translateX(5px); 
+    } 
+      
+    75%{ 
+      transform: translateX(-5px); 
+    }
+    100%{ 
+      transform: translateX(0px); 
+    } 
 }

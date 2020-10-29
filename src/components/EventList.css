@@ -1,20 +1,16 @@
-h1 {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: white;
-}
 
 a {
-    text-decoration: none;
-    /* color: white; */
+	text-decoration: none;
+	/* color: white; */
+}
+.list {
+	display: inline;
+    margin: 5px;
 }
 
-.list-item {
-    display: flex;
-    border: 2px solid lightgray;
-    border-radius: 8px;
+.list-items {
+	border: 2px solid lightgray;
+	border-radius: 8px;
     width: 1fr;
+    padding: 0 20px;
 }
-
-/* .list {
-    color: black;
-} */
