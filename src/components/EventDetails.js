@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import Moment from 'react-moment';
+import './EventDetails.css';
 
 const EventDetails = ({ match }) => {
     const [earthquake, setEarthquake] = useState({})
@@ -13,12 +15,22 @@ const EventDetails = ({ match }) => {
     }, [])
     return (
 			<div>
-				{earthquake.depth}km
-				{earthquake.magnitude}
-				{earthquake.title}
-				{earthquake.latitude}
-				{earthquake.longitude}
-				<a href={`https://earthquake.usgs.gov/earthquakes/eventpage/${match.params.id}`}>More details from the USGS</a>
+				Location: {earthquake.title}
+				<br />
+				Time: <Moment>{earthquake.eventtime}</Moment>
+				<br />
+				Depth: {earthquake.depth} km
+				<br />
+				Magnitude: {earthquake.magnitude}
+				<br />
+				Latitude: {earthquake.latitude}
+				<br />
+				Longitude: {earthquake.longitude}
+				<br />
+				<a
+					href={`https://earthquake.usgs.gov/earthquakes/eventpage/${match.params.id}`}>
+					More details from the USGS
+				</a>
 			</div>
 		);
 };
