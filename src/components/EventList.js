@@ -31,7 +31,7 @@ const EventList = () => {
 							<h4>{earthquake.properties.place}</h4>
 						</span>
 						<span className='list-details'>
-							<h4>Magnitude: {earthquake.properties.mag}</h4>
+							<h4>Magnitude: {earthquake.properties.mag.toFixed(2)}</h4>
 						</span>
 					</div>
 				</Link>
