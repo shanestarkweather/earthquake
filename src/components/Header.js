@@ -5,9 +5,6 @@ const Header = ({setTime, setMagnitude}) => {
 
 	return (
 		<div className='header'>
-			<h1>
-				<a href='/'>What's Shakin'?</a>
-			</h1>
 			<form>
 				<select onChange={ (event) => setTime(event.target.value)}>
 					<option value='hour'>Past Hour</option>

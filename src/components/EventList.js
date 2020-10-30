@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './EventList.css';
 import Moment from 'react-moment';
+import Header from './Header'
 
-const EventList = ({ time, magnitude }) => {
+const EventList = ({ time, setTime, magnitude, setMagnitude }) => {
 	const [earthquakes, setEarthquakes] = useState([]);
 	useEffect(() => {
 		const url = `https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/${magnitude}_${time}.geojson`;
@@ -17,6 +18,7 @@ const EventList = ({ time, magnitude }) => {
 
 	return (
 		<div className='list'>
+			<Header setTime={setTime} setMagnitude={setMagnitude} />
 			<h2>
 				Earthquakes above magnitude {magnitude} within in the last {time}:
 			</h2>
