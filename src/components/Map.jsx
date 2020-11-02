@@ -10,9 +10,7 @@ const Map = ({ earthquake }) => {
   return null
   }
   return <div className="map">
-    <h2 className="map-h2">{earthquake.title}</h2>
-
-    <div className="google-map">
+      <div className="google-map">
       <GoogleMapReact
         bootstrapURLKeys={{ key: process.env.REACT_APP_GMAP_API_KEY }}
         center={{ lat: parseInt(earthquake.latitude), lng: parseInt(earthquake.longitude) }}
